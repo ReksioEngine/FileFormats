@@ -16,7 +16,7 @@ struct Header {
    u32 fps;
    u32 flags;
    u8 transparency; // not verified
-   u16 randomFramesNumber; // unknown
+   u16 randomFramesNumber;
    padding[0xa];
    u32 authorLen;
    char author[authorLen];
@@ -52,8 +52,9 @@ struct Event {
    u16 framesCount;
    padding[6];
    u32 loopNumber;
-   padding[4];
-   padding[6];
+   padding[2];
+   u32 fps;
+   u32 flags;
    u8 transparency;
    padding[0xc];
    
