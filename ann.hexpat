@@ -12,7 +12,7 @@ struct Header {
    u16 framesCount;
    u16 bpp;
    u16 eventsCount;
-   padding[0xd];
+   u8 someName[0xd];
    u32 fps;
    u32 flags;
    u8 transparency; // not verified
